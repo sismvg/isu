@@ -1,0 +1,25 @@
+
+打开complier文件夹(你需要是vs2013...vs2012也可以，不过需要修改两处地方)
+然后设定包含目录为go所在的文件夹以及boost所在的文件夹
+库目录设定boost的库目录,最后生成
+要用的话直接包含头文件以及Jojo.lib所在目录
+
+template<class T>
+using shared_ptr=std::shared_ptr<T>
+变成
+template<class T>
+class shared_ptr
+:public std::shared_ptr<T>
+{
+};
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+template<class T>
+using srclit=std::list<T>
+变成
+template<class T>
+class srclist
+:public std::list<T>
+{
+};
+
+详情参见:http://blog.csdn.net/fq_hayate
