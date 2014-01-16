@@ -43,7 +43,7 @@ template<
 	size_t NowDix, size_t MaxDix>
 void radix_sort_impl(Iterator begin, Iterator end,std::true_type)
 {
-	count_sort<10, NowDix>(begin, end);
+	count_sort<Hexadecimal, NowDix>(begin, end);
 	radix_sort_impl<Hexadecimal,NowDix+1, MaxDix>
 		(begin, end, 
 		std::integral_constant<bool,NowDix!=MaxDix>());
