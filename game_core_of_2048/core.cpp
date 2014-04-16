@@ -1,24 +1,25 @@
 /*
-Copyright : ËÄÔªìª 2014
+Copyright : ï¿½ï¿½Ôªï¿½ 2014
 email : sismvg@hotmail.com
-ÕâÒ»³ÌĞòÊÇ×ÔÓÉÈí¼ş£¬Äã¿ÉÒÔ×ñÕÕ×ÔÓÉÈí¼ş»ù½ğ»á³ö°æµÄGNUÍ¨ÓÃ¹«¹²Ğí¿ÉÖ¤Ìõ¿îÀ´ĞŞ¸ÄºÍÖØĞÂ·¢²¼ÕâÒ»³ÌĞò¡£»òÕßÓÃĞí¿ÉÖ¤µÄµÚ¶ş°æ£¬»òÕß£¨¸ù¾İÄãµÄÑ¡Ôñ£©ÓÃÈÎºÎ¸üĞÂµÄ°æ±¾¡£
-·¢²¼ÕâÒ»³ÌĞòµÄÄ¿µÄÊÇÏ£ÍûËüÓĞÓÃ£¬µ«Ã»ÓĞÈÎºÎµ£±£¡£ÉõÖÁÃ»ÓĞÊÊºÏÌØ¶¨Ä¿µÄµÄÒşº¬µÄµ£±£¡£¸üÏêÏ¸µÄÇé¿öÇë²ÎÔÄGNUÍ¨ÓÃ¹«¹²Ğí¿ÉÖ¤¡£
+ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½GNUÍ¨ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Äºï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ò¡£»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ÄµÚ¶ï¿½ï¿½æ£¬ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¸ï¿½ï¿½ÂµÄ°æ±¾ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ÎºÎµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Êºï¿½ï¿½Ø¶ï¿½Ä¿ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½GNUÍ¨ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½
 */
 #include "core.hpp"
 #include <random>
 
 namespace isu
 {
-	//¿ØÖÆÆ¬µÄ×ª»»
+	//ç²¾ç®€ä¸€ä¸‹é™æ€å˜é‡çš„å®šä¹‰ï¼Œè¿™è´§å¤ªéº»çƒ¦äº†ï¼Œç®€å•å®ç¼–ç¨‹å¥½äº†
+	//ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½×ªï¿½ï¿½
 #define detail operation_detail
 	const detail board::_mains_axis[4]=
-	{//Ö÷ÖáµÄÆğÊ¼×ø±êÊÇ¶¯Ì¬µÄ£¬ËùÒÔÕâÀïÉè¶¨×ø±êÃ»ÓĞÒâÒå
+	{//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½Ì¬ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		detail(multi_index(0,0),longitudinal,-1,1),//up
 		detail(multi_index(0,0),longitudinal,0,-1),//down
 		detail(multi_index(0,0),lateral,-1,1),//left
 		detail(multi_index(0,0),lateral,0,-1),//right	
 	};
-	//¿ØÖÆÖáµÄ×ª»»
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
 	const detail board::_vice_axis[4]=
 	{
 		detail(multi_index(0,0),lateral,-1,1),//up
@@ -68,13 +69,13 @@ namespace isu
 	void board::_mapping_operation_detail(operation_detail& detail)
 	{
 		_mapping_multi_index(detail.start);
-		//ÕâÀïµÄ¸ºÊıµÄ±ß½çÊÇÓÃÀ´·´ÏòÉ¨ÃèµÄ
+		//ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½Ä±ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½ï¿½
 		detail.boundary = 
 			(detail.boundary == 0) ? --detail.boundary : _board.shape()[detail.axis];
 	}
 
 	void board::_random_piece()
-	{//ÂıµÄºÜ..
+	{//ï¿½ï¿½ï¿½Äºï¿½..
 		if (_full_board()) return;
 
 		typedef std::uniform_int_distribution<> machine;
@@ -82,7 +83,7 @@ namespace isu
 		std::random_device device;
 		std::mt19937 seed(device() );		
 		machine rand(0, _board.num_elements() - 1);
-
+//åº”è¯¥æŠŠéšæœºç”Ÿæˆæ‰”åˆ°åˆ«çš„å‡½æ•°ï¼Œæä¸ªæ¨¡æ¿è¿˜æ˜¯ä»€ä¹ˆçš„å‡ºæ¥
 		multi_index index(0, 0);
 		length_type 
 			lateral_length = _board.shape()[lateral], 
@@ -97,7 +98,7 @@ namespace isu
 		} while (_data_of(index)!=0);
 		assert(index != multi_index(_board.shape()[longitudinal],_board.shape()[lateral]) );
 #pragma warning(pop)
-		machine rand_data(1, 2);//×¢Òâ£¬index¾ø²»»áÊÇÎŞĞ§µÄ,ÒÔ¼°ÊÇ²»ÊÇÒª¸ø¸öÑ¡ÏîÀ´Éè¶¨Ëæ»úÊıÖµ·¶Î§ÄØ¡£¡£
+		machine rand_data(1, 2);//×¢ï¿½â£¬indexï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½,ï¿½Ô¼ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Î§ï¿½Ø¡ï¿½ï¿½ï¿½
 		data_type data = rand_data(seed);
 		_set_board(index,data);
 		_callback.random_piece(index,data);
@@ -115,7 +116,7 @@ namespace isu
 #pragma  warning(disable:4018)
 		auto trans_data =
 		[&](multi_index index, operation_axis axis)->data_type
-		{
+		{//å¸¦è¾¹ç•Œæ£€æµ‹çš„æ•°æ®è·å–ç½¢äº†ã€‚ã€‚åå­—èµ·çš„ä¸è¡Œ
 			length_type& main_axis = index.axis(axis);
 			return (++main_axis >= 0 && main_axis < _board.shape()[axis]) ?
 					data_of(index) : none_pos;
@@ -129,7 +130,7 @@ namespace isu
 		{
 			assert(_board[lat][lon] != 0);
 			const data_type& cur = _board[lat][lon];
-
+//åº”è¯¥è¿˜å¯ä»¥ç²¾ç®€ä¸€ä¸‹ä»£ç ï¼Œæ¯”å¦‚æ·»åŠ ä¸ªåŒå±‚çš„for_each,ä»¥åŠå¢åŠ ä¸€ä¸ªå¯¹äºé™æ€åå­—å˜é‡çš„æ‰¹é‡è°ƒç”¨å‡½æ•°ï¼ˆç”¨å˜é•¿æ¨¡æ¿ï¼‰
 #define  check_ret(val_name,axis)\
 			data_type val_name= trans_data(multi_index(lat, lon),axis);\
 			if (val_name != -1 && !(is_dead = (cur != val_name))) return false;
@@ -179,7 +180,7 @@ namespace isu
 	}
 
 	void board::change(operation direction)
-	{//Ó¦¸Ã¿ÉÒÔÏû³ı´úÂëÖØ¸´
+	{//Ó¦ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 		auto mains=_mains_axis[direction];
 		_mapping_operation_detail(mains);
 		auto vices=_vice_axis[direction];
@@ -196,7 +197,7 @@ namespace isu
 			{
 				mains_temp.start= index;
 				_axis_next(mains_temp);
-				mains_temp.start = mains_temp.start;//Èç¹ûindex¾ÍÊÇ·Ç0µÄÔõÃ´°ìµÄÇé¿öÏÂ
+				mains_temp.start = mains_temp.start;//ï¿½ï¿½ï¿½indexï¿½ï¿½ï¿½Ç·ï¿½0ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				piece_info next_piece = _next_piece(mains_temp);
 				if (next_piece.second == none_pos) return false;
 				data_type& cur_data = _data_of(index);
@@ -232,7 +233,7 @@ namespace isu
 	}
 	board::piece_info board::_next_piece(const operation_detail& detail)
 	{
-		//ÕÒµ½´Óindex¿ªÊ¼µÄdetail.axisÖáµÄµÚÒ»¸ö·Ç¿Õ·½¿é£¬Èç¹ûÃ»ÓĞÔò·µ»Ø-1
+		//ï¿½Òµï¿½ï¿½ï¿½indexï¿½ï¿½Ê¼ï¿½ï¿½detail.axisï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ·ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ò·µ»ï¿½-1
 		piece_info result(multi_index(none_pos, none_pos), none_pos);
 		_each_axis(detail, [&](multi_index index)
 		{
