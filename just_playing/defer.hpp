@@ -15,7 +15,7 @@ namespace isu
 		//������C++��ֲ����������˳���ն���Ķ���˳��ķ�����
 	public:
 		mydefer();
-		~mydefer();
+		~mydefer() noexcept;
 		mydefer(const mydefer&) = delete;
 		mydefer* operator &() = delete;
 		const mydefer* operator &() const = delete;
