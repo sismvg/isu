@@ -12,7 +12,7 @@ namespace isu
 
 	class mydefer
 	{
-		//建立在C++里局部对象的析构顺序按照对象的定义顺序的反向来
+		//锟斤拷锟斤拷锟斤拷C++锟斤拷植锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷顺锟斤拷锟秸讹拷锟斤拷亩锟斤拷锟剿筹拷锟侥凤拷锟斤拷锟斤拷
 	public:
 		mydefer();
 		~mydefer();
@@ -26,7 +26,7 @@ namespace isu
 			_fn = fn;
 		}
 		template<class Func,class... Arg>
-		void operator()(Func fn, Arg... arg)
+		void operator()(Func fn, Arg... arg) noexcept
 		{
 			_fn=std::bind(fn, arg...);
 		}
