@@ -83,7 +83,7 @@ namespace isu
 	};
 	template<bool bl,class T1,class T2>
 	class myif_
-	{
+	{//这货没有对数据类型进行判断...暂时用用,gcc里没有std::if_...
 	public:
 		typedef typename myif_impl<bl,T1,T2>::type type;
 	};
