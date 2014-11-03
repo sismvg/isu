@@ -14,8 +14,10 @@ namespace isu
 	{
 		//������C++��ֲ����������˳���ն���Ķ���˳��ķ�����
 	public:
-		mydefer();
-		~mydefer() noexcept;
+		mydefer()
+		{}
+		~mydefer()
+		{_fn();}
 		mydefer(const mydefer&) = delete;
 		mydefer* operator &() = delete;
 		const mydefer* operator &() const = delete;
@@ -26,7 +28,7 @@ namespace isu
 			_fn = fn;
 		}
 		template<class Func,class... Arg>
-		void operator()(Func fn, Arg... arg) noexcept
+		void operator()(Func fn, Arg... arg)
 		{
 			_fn=std::bind(fn, arg...);
 		}
